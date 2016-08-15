@@ -1,0 +1,330 @@
+/* deleted lots of stuff from illiteratebooks wordpress css */
+
+
+/**
+ * 3.0 Typography
+ */
+
+body,
+select,
+textarea {
+  color: black;
+  /* font-family: "Noto Serif", serif; */   /* old, from wordpress */
+  font-family: "Adobe Caslon", Georgia, "Times New Roman", Times, serif; /* same as newyorker.com */
+  font-size: 20px;                                                        /* same as newyorker.com */
+  line-height: 1.6;
+  /* font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6; */     /* old, from wordpress */
+}
+
+
+
+html {
+  background: yellow; 
+}
+
+body {
+  margin: 50px 150px 50px 150px;        /* top, right, bottom, left */
+  padding: 50px 75px 50px 75px;       /* top, right, bottom, left */
+  background-color: white;
+}
+
+span.buttonWidth{
+    width: 120px;
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-weight: 700;
+}
+
+
+
+/**
+ * 4.0 Elements
+ */
+
+  #character-names-form {
+  background-color: #f4deee;
+      padding-top: 15px;
+      padding-right: 25px;
+      padding-bottom: 1px;
+      padding-left: 35px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue;     /*** form id changes background color for Character Names form ***/
+}
+
+  #story-title-form {
+  background-color: #f4deee;
+    padding-left: 50px;
+        border-width: 5px;
+  border-style: solid;
+  border-color: blue;        /*** form id changes background color for Story Title form ***/
+}
+
+  #mc_embed_signup  {               /*** MailChimp Email Signup form ***/
+  background-color: #f4deee;
+      padding-left: 50px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue;    /*** form id changes background color for MailChimp Email Signup form ***/
+}
+#mc_embed_signup:hover {
+    background-color: yellow; /* form is yellow on hover */
+}
+
+  #mce-EMAIL {
+  max-width: 75%;       /*** added '#mce-EMAIL' so MailChimp Email signup box is wider -- ER February 2016 ***/
+}
+
+  #box-title {
+  max-width: 75%;       /*** added '#box-title' so 'Story Title' box is wider -- ER January 2016 ***/
+}
+  
+
+.title {
+      text-align: center;       /*** Story Title gets underlined, bolded, and centered via div class ***/
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: blue;
+}
+
+
+  #genres-form {
+  background-color: #ff0000;
+      padding-top: 5px;
+      padding-right: 5px;
+      padding-bottom: 1px;
+      padding-left: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: blue;
+}
+
+/*** added 'genres-form' form id for form, 'Choose Genre' - ER January 2016 ***/
+
+/* adding blink highlight effect to genres choosen, ER July 2016 */
+
+/* maybe below should be 'div.blinkGenres' ???, ER July 2016 */
+
+.blinkGenres {
+      animation: blinkGenres 4s ease-out -2s;
+      -webkit-animation: blinkGenres 4s ease-out -2s;
+    }
+    @keyframes blinkGenres {
+      to {
+          background-color: yellow;
+      }
+    }
+
+/* want to add above so new genres blink when added to genre summary, ER July 2016 */
+
+p.blinkParagraph {
+      animation: blinkParagraph 4s ease-out -2s;
+      -webkit-animation: blinkParagraph 4s ease-out -2s;
+    }
+    @keyframes blinkParagraph {
+      to {
+          background-color: #00FFFF;
+      }
+    }
+
+span.blinkVerb {
+      animation: blinkVerb 4s ease-out -2s;
+      -webkit-animation: blinkVerb 4s ease-out -2s;
+    }
+    @keyframes blinkVerb {
+      to {
+          background-color: yellow;
+      }
+    }
+
+span.blinkNoun {
+      animation: blinkNoun 4s ease-out -2s;
+      -webkit-animation: blinkNoun 4s ease-out -2s;
+    }
+    @keyframes blinkNoun {
+      to {
+          background-color: red;
+      }
+    }
+
+span.blinkSetting {
+      animation: blinkSetting 4s ease-out -2s;
+      -webkit-animation: blinkSetting 4s ease-out -2s;
+    }
+    @keyframes blinkSetting {
+      to {
+          background-color: #00FF00;
+      }
+    }
+
+span.blinkProse {
+      animation: blinkProse 4s ease-out -2s;
+      -webkit-animation: blinkProse 4s ease-out -2s;
+    }
+    @keyframes blinkProse {
+      to {
+          background-color: #FF00FF;
+      }
+    }
+
+/**
+ * five classes above are for blinking background colors on click when paragraphs and words are flipped or shuffled
+ */
+
+
+ul,
+ol {
+  list-style: none; /* so unordered list does not have bullet points in genre selection */
+  margin: 0 0 0 0; /* so unordered list aligns vertically in genre selection */
+}
+/**
+ * changed unordered and ordered list margins above from '0 0 1.6em 1.3333em' to '0 0 0 0' 
+ * so unordered list aligns vertically in genre selection -- ER January 2016
+ */
+
+
+/** fixed, full height, side nav bar for menu -- ER August 2016
+*/
+
+#navigation_menu ul {
+  list-style: none; /* so unordered list does not have bullet points in genre selection */
+  margin: 0 0 0 0; /* * so unordered list aligns vertically in genre selection */
+  background-color: blue;
+  /* width: 25%; ------------- change when i make it a sidebar */
+  /* position: fixed; ------------- change when i make it a sidebar */
+  height: 100%; /* full height */
+  overflow: auto;
+  padding: 0;
+}
+
+#navigation_menu a {
+      padding: 8px 16px;
+  display: block;
+  color: white; /* text is white on blue */
+  text-decoration: none;
+}
+
+#navigation_menu a:hover {
+  background-color: orange;
+  color: black; /* text is black on orange */
+}
+
+#navigation_menu a:active {
+  background-color: red; /* menu item is red on click */
+}
+
+
+
+
+/**
+ * 5.0 Forms
+ */
+
+button,
+input,
+select,
+textarea {
+  background-color: #f7f7f7;    /* gray? delete this */
+  border-radius: 0;
+  margin: 0;
+  max-width: 45%;
+  vertical-align: super;
+  display: inline-block;
+}
+
+/**
+ * Changed vertical-align from baseline to super above, added inline-block display... 
+ * still want to get input box lined up with label but will need to keep playing with that, 
+ * prob need to change font-size and line-height options, 
+ * so took out (font-size: 16px; font-size: 1.6rem; line-height: 1.5;) ; 
+ * changed max-width above from 100% to 45%, 
+ * and added this label below for the character names -- ER October 2015 ... updated label name below to '#character-names-form' *
+ **/
+
+#character-names-form label {
+    width: 115px;
+    padding-right: 5px;
+    float: left;
+    vertical-align: 0px;
+    display: inline-block;
+    background: lightblue;
+}
+#character-names-form:hover {
+    background-color: yellow; /* form is yellow on hover */
+}
+
+
+#genres-form label {       /*** added so 'Choose Genre' unordered list form aligns vertically in rows -- ER January 2016 ***/
+    padding-left: 50px;
+    width: 250px;
+    display: inline-block;
+    background: lightblue;
+}
+#story-title-form:hover {
+    background-color: yellow; /* form is yellow on hover */
+}
+
+#story-title-form label {    /*** added so 'Title Your Story' label has a lightblue background -- ER February 2016 ***/
+    background: lightblue;
+}
+#story-title-form:hover {
+    background-color: yellow; /* form is yellow on hover */
+}
+
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  border: 0;
+  outline: none; /* removes outline to last clicked button*/
+  background-color: blue; /* button is blue */
+  color: white; /* button text is white */
+  border: 1px solid black; /* button border is black */ 
+  font-size: 16px;      /* smaller than rest of text, so buttons aren't too big */
+  font-family: Georgia, "Times New Roman", Times, serif; /* no "Adobe Caslon" like the rest of the text */
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: white; /* button is white on hover */
+  color: blue; /* button text is blue on hover */
+}
+
+
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: yellow; /* button is white on click */
+}
+
+
+
+
+
+
+
+/**
+ * is above here everything i need????????????
+ */
